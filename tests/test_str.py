@@ -1,5 +1,10 @@
 from composable_pandas.str import capitalize
 from datetime import datetime
+from composable_pandas.str import normalize
+from composable_pandas.str import round
+from composable_pandas.str import strftime
+from composable_pandas.str import to_period
+from composable_pandas.str import floor
 
 import numpy as np
 import pytest
@@ -17,3 +22,5 @@ def test_capitalize():
     mixed = mixed >> capitalize()
     exp = Series(["Foo", np.nan, "Bar", np.nan, np.nan, "Blah", np.nan, np.nan, np.nan])
     tm.assert_almost_equal(mixed, exp)
+
+

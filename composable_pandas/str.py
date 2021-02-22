@@ -4,6 +4,7 @@ import pandas as pd
 
 @pipeable
 def capitalize(col):
+
     """Convert strings in the Series/Index to be capitalized.
     
     Equivalent to :meth:`str.capitalize`.
